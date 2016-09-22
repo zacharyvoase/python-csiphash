@@ -40,7 +40,7 @@ Currently there's just a single function, `siphash24()`, that accepts a secret
 key bytestring of length 16 and an arbitrary length bytestring for the message,
 and returns an 8-byte digest bytestring:
 
-```python
+```pycon
 >>> from csiphash import siphash24
 >>> siphash24(b'\x00' * 16, b'hello, world!\n')
 b'\xf1G4\x95\xa5\xaa\xc2b'
@@ -48,14 +48,14 @@ b'\xf1G4\x95\xa5\xaa\xc2b'
 
 If you want to specify keys in hexadecimal, use `.decode('hex')`:
 
-```python
+```pycon
 >>> siphash24('abcdef01234567899876543210fedcba'.decode('hex'), b'hello, world!\n')
 '\xd3\xd4N\x1dk\x1f$='
 ```
 
 If you want digests in hexadecimal, use `.encode('hex')`:
 
-```python
+```pycon
 >>> siphash24(b'\x00' * 16, b'hello, world!\n').encode('hex')
 'f1473495a5aac262'
 ```
