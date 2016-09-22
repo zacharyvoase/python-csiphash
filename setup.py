@@ -13,7 +13,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='csiphash',
-    version='0.0.1',
+    version='0.0.2',
 
     description='A CFFI-based implementation of SipHash24',
     long_description=readme,
