@@ -20,11 +20,14 @@ def time_hashing(message_size):
 
 
 # From the SipHash paper (http://cr.yp.to/siphash/siphash-20120620.pdf):
+#
 # > A fair rule-of-thumb for the distribution on message-sizes on an Internet
 # > backbone is that roughly one-third of messages are 43 bytes (TCP ACKs),
 # > one-third are about 256 bytes (common PPP dialup MTU), and one-third are 1500
 # > bytes (common Ethernet MTU).
-MESSAGE_SIZES = [43, 256, 1500]
+#
+# We're adding a 1MiB message size too, just for fun.
+MESSAGE_SIZES = [43, 256, 1500, (1024 * 1024)]
 
 
 if __name__ == '__main__':
