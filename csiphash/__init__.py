@@ -40,10 +40,8 @@ def siphash24(key, data):
         raise TypeError("data must be a bytestring")
 
     out_arr = ffi.new('uint8_t[8]')
-    in_arr = ffi.cast('uint8_t *', ffi.from_buffer(data))
-    key_arr = ffi.cast('uint8_t *', ffi.from_buffer(key))
 
-    result = lib.siphash(out_arr, in_arr, len(data), key_arr)
+    result = lib.siphash(out_arr, data, len(data), key)
     if result == 0:
-        return ''.join(map(six.int2byte, ffi.unpack(out_arr, 8)))
+        return ''.join(map(six.int2byte, out_arr[0:8]))
     raise RuntimeException("SipHash failed with error code {}".format(result))
