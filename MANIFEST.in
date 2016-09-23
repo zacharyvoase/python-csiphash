@@ -1,1 +1,2 @@
 include siphash24.c
+include csiphash_build.py
