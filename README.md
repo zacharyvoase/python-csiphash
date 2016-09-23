@@ -15,10 +15,10 @@ follows on a mid-2015 MacBook Pro:
 
 | Message Size | Time per Hash (Amortized over 1M) |
 | ------------ | --------------------------------- |
-| 43 bytes     | 4.89 microseconds                 |
-| 256 bytes    | 5.00 microseconds                 |
-| 1500 bytes   | 6.12 microseconds                 |
-| 1 MiB        | 0.88 milliseconds                 |
+| 43 bytes     | 3.17 microseconds                 |
+| 256 bytes    | 3.39 microseconds                 |
+| 1500 bytes   | 4.40 microseconds                 |
+| 1 MiB        | 0.74 milliseconds                 |
 
   [siphash]: https://131002.net/siphash/
   [siphash-c]: https://github.com/veorq/SipHash
