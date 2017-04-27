@@ -13,7 +13,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='csiphash',
-    version='0.0.4',
+    version='0.0.5',
 
     description='A CFFI-based implementation of SipHash24',
     long_description=readme,
@@ -25,8 +25,8 @@ setup(
 
     packages=find_packages(exclude=['test']),
 
-    setup_requires=["cffi>=1.0.0"],
+    setup_requires=["cffi>=1.4.0"],
     cffi_modules=["csiphash_build.py:ffibuilder"],
 
-    install_requires=["cffi>=1.0.0"],
+    install_requires=["cffi>=1.4.0"],
 )
