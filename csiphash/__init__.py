@@ -43,5 +43,5 @@ def siphash24(key, data):
 
     result = lib.siphash(out_arr, data, len(data), key)
     if result == 0:
-        return ''.join(map(six.int2byte, out_arr[0:8]))
+        return b''.join(map(six.int2byte, out_arr[0:8]))
     raise RuntimeException("SipHash failed with error code {}".format(result))

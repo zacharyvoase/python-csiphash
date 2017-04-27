@@ -1,5 +1,7 @@
 """A naive benchmark script."""
 
+from __future__ import print_function
+
 import textwrap
 import timeit
 
@@ -33,4 +35,4 @@ MESSAGE_SIZES = [43, 256, 1500, (1024 * 1024)]
 if __name__ == '__main__':
     for message_size in MESSAGE_SIZES:
         average_time = time_hashing(message_size)
-        print 'siphash24(char[{message_size}]) = {average_time:0.2f} microseconds'.format(message_size=message_size, average_time=average_time)
+        print('siphash24(char[{message_size}]) = {average_time:0.2f} microseconds'.format(message_size=message_size, average_time=average_time))
